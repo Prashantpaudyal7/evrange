@@ -18,11 +18,10 @@ const [loading,setLoading] = useState(false);
     };
 
     try {
-
       
       console.log(payload);
       setLoading(true);
-      const response = await axios.get("api/dummy");
+      const response = await axios.post("api/route", payload);
       setApiResponse(response?.data);
       console.log(response?.data);
       setLoading(false)
