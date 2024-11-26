@@ -21,7 +21,7 @@ const [loading,setLoading] = useState(false);
       
       console.log(payload);
       setLoading(true);
-      const response = await axios.post("api/route", payload);
+      const response = await axios.post("/api/route", payload);
       setApiResponse(response?.data);
       console.log(response?.data);
       setLoading(false)
