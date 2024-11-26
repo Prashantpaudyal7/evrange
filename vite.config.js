@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api-azure-five.vercel.app', // URL of your FastAPI server
+        target: 'http://127.0.0.1:8000', // URL of your FastAPI server
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
