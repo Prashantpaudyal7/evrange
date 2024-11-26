@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:8000', // URL of your FastAPI server
+        target: 'https://api-av2ndp9bf-prashants-projects-1005b5a4.vercel.app', // URL of your FastAPI server
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },

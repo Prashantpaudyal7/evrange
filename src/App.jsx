@@ -16,13 +16,15 @@ const [loading,setLoading] = useState(false);
       start: { lat: coordinates[0][0], lng: coordinates[0][1] },
       end: { lat: coordinates[1][0], lng: coordinates[1][1] },
     };
-    console.log(payload);
 
     try {
+
+      
       console.log(payload);
       setLoading(true);
-      const response = await axios.post("/api/route", payload);
-      setApiResponse(response.data);
+      const response = await axios.get("api/dummy");
+      setApiResponse(response?.data);
+      console.log(response?.data);
       setLoading(false)
     } catch (error) {
       console.error("Error sending data to API:", error);
