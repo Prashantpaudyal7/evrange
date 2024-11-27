@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api2-eight-eta.vercel.app', // URL of your FastAPI server
+        target: 'https://flaskapi-1-gy9w.onrender.com/', // URL of your FastAPI server
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
