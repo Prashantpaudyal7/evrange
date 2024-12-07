@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://flaskapi-1-gy9w.onrender.com/', // URL of your FastAPI server
+        target: 'https://vk0k4dl5-8000.inc1.devtunnels.ms', // URL of your FastAPI server
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
